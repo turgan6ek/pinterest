@@ -5,7 +5,7 @@ import {AuthGuard} from '../guards/auth.guard';
 import {HomePageComponent} from '../home-page/home-page.component';
 
 const routes: Routes = [
-  {path : '', component: InitialComponent},
+  {path : '', component: getHomeComponent()},
 ];
 
 @NgModule({
@@ -15,7 +15,7 @@ const routes: Routes = [
 export class InitRoutingModule { }
 export function getHomeComponent(): Type<Component> {
 
-  if(AuthGuard.prototype.canActivate){
+  if(localStorage.getItem('currentUser')){
 
     return <Type<Component>>HomePageComponent;
 

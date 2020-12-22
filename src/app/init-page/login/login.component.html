@@ -9,15 +9,15 @@
   </div>
   <h2 class="text-center" style="font-weight: normal; font-size: 35px">Welcome to Pinterest</h2>
   <div class="modal-body w-100 m-auto"  style="border: none" >
-    <form>
+    <form  #form1="ngForm">
       <div class="form-group m-auto" style="width: 60%">
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" style="height: 45px; border-radius: 15px">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" style="height: 45px; border-radius: 15px" [(ngModel)]="username" name="username">
       </div>
       <div class="form-group pt-2 m-auto" style="width: 60%">
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"  style="height: 45px; border-radius: 15px">
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"  style="height: 45px;  border-radius: 15px" [(ngModel)]="password" name="password">
       </div>
       <div class="form-group pt-3 m-auto border-5" style="width: 60%">
-        <button type="button" class="btn btn-danger w-100" style="background-color: #E60023" (click)="modal.close('Save click')"  style="height: 40px; border-radius: 15px">Log in</button>
+        <button type="button" class="btn btn-danger w-100" style="background-color: #E60023" (click)="login()"  style="height: 40px; border-radius: 15px">Log in</button>
         <small class="text-center" style="font-size: 12px">By continuing, you agree to <span style="font-weight: bold"> Pinterest's Terms of Service, Privacy policy.</span></small>
       </div>
 

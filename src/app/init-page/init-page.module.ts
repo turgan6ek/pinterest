@@ -7,6 +7,7 @@ import {InitRoutingModule} from './init-routing.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import {NgbDatepickerModule} from '@ng-bootstrap/ng-bootstrap';
+import {FormsModule} from '@angular/forms';
 
 
 
@@ -15,7 +16,8 @@ import {NgbDatepickerModule} from '@ng-bootstrap/ng-bootstrap';
     imports: [
         CommonModule,
         InitRoutingModule,
-        NgbDatepickerModule
+        NgbDatepickerModule,
+        FormsModule
     ],
   exports: [
     InitialComponent,
