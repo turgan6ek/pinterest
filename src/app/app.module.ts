@@ -13,9 +13,12 @@ import { HttpClientModule} from '@angular/common/http';
 import {UserService} from './services/user.service';
 import {AuthenticationService} from './services/auth.service';
 import { HeaderComponent } from './header/header.component';
+import { ProfilePageComponent } from './profile-page/profile-page.component';
+import { FollowingComponent } from './following/following.component';
 
 const routes = [
-  {path: '', component: getHomeComponent(), canActivate:[AuthGuard]}
+  {path: '', component: getHomeComponent(), fullPath:"", canActivate:[AuthGuard]},
+  {path: 'following', component: FollowingComponent}
 ]
 
 @NgModule({
@@ -23,6 +26,8 @@ const routes = [
     AppComponent,
     HomePageComponent,
     HeaderComponent,
+    ProfilePageComponent,
+    FollowingComponent,
   ],
   imports: [
     BrowserModule,

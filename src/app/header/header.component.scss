@@ -1,0 +1,17 @@
+a{
+  border-radius: 50px;
+  padding: 9px;
+  color: black;
+}
+a:hover {
+  background-color: #dedede;
+  transition: 0.1s;
+}
+.active{
+  background-color: black;
+  color: white;
+}
+
+.active:hover {
+  background-color: black;
+}
