@@ -1,1 +1,14 @@
-<p>initial works!</p>
+<app-initial-header></app-initial-header>
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="assets/food.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="assets/home.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+</div>
+
+  <div *ngIf="scrolled == 1"><footer><app-footer ></app-footer></footer></div>
+

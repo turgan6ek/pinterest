@@ -1,0 +1,29 @@
+<ng-template #content let-modal>
+  <div class="modal-header" style="border: none">
+    <div class="text-center w-100 pt-2" style="margin-left: 15px"> <i class="fab fa-pinterest" style="color: #E60023; font-size: 33px"></i></div>
+
+    <button type="button" style="color: black; border-radius: 15px" class="btn-outline-light btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    </button>
+
+
+  </div>
+  <h2 class="text-center" style="font-weight: normal; font-size: 35px">Welcome to Pinterest</h2>
+  <div class="modal-body w-100 m-auto"  style="border: none" >
+    <form>
+      <div class="form-group m-auto" style="width: 60%">
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" style="height: 45px; border-radius: 15px">
+      </div>
+      <div class="form-group pt-2 m-auto" style="width: 60%">
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"  style="height: 45px; border-radius: 15px">
+      </div>
+      <div class="form-group pt-3 m-auto border-5" style="width: 60%">
+        <button type="button" class="btn btn-danger w-100" style="background-color: #E60023" (click)="modal.close('Save click')"  style="height: 40px; border-radius: 15px">Log in</button>
+        <small class="text-center" style="font-size: 12px">By continuing, you agree to <span style="font-weight: bold"> Pinterest's Terms of Service, Privacy policy.</span></small>
+      </div>
+
+    </form>
+  </div>
+
+</ng-template>
+<button type="button" class="btn btn-secondary" (click)="open(content)" style="background-color: whitesmoke; color: black;font-weight: bold; border-radius: 26px;  border:1px solid whitesmoke" >Sign up</button>
+
