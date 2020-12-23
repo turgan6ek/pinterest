@@ -19,5 +19,7 @@ export class PinService {
   createPin(pins): Observable<Pin>{
     return this.http.post<Pin>(this.apiUrl+'/pins', JSON.stringify(pins),this.httpOptions);
   }
-
+  getPin(id):Observable<Pin>{
+    return this.http.get<Pin>(this.apiUrl + '/pins/' + id)
+  }
 }
