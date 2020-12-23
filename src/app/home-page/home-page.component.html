@@ -1,4 +1,7 @@
 <nav class="fixed-top"><app-header></app-header></nav>
 <body>
-
+<ul>
+  <app-pin *ngFor="let pinList of Pin" [list]="pinList" style="margin: 3px"></app-pin>
+  <li></li>
+</ul>
 </body>

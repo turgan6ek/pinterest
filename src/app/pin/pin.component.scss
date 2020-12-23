@@ -1,0 +1,41 @@
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+li {
+  min-width: 24vh;
+  height: 36vh;
+  flex-grow: 1;
+}
+.container {
+  display:inline-block;
+  position:relative;
+}
+img {
+  position: relative;
+  max-height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+img {
+  border-radius: 15px;
+}
+.container .btn {
+  border-radius: 50px;
+  top: 10px;
+  right: 25px;
+  position: absolute;
+  opacity: 0;
+  color: white;
+  background-color: #E60023;
+  z-index: 1;
+}
+.container:hover .btn{
+  opacity: 1;
+}
+.container:hover .img{
+  opacity: 0.7;
+  transition: 0.5s;
+}

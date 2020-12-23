@@ -15,10 +15,15 @@ import {AuthenticationService} from './services/auth.service';
 import { HeaderComponent } from './header/header.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { FollowingComponent } from './following/following.component';
+import { PinComponent } from './pin/pin.component';
+import {PinService} from './services/pin.service';
+import { PinMoreComponent } from './pin-more/pin-more.component';
 
 const routes = [
-  {path: '', component: getHomeComponent(), fullPath:"", canActivate:[AuthGuard]},
-  {path: 'following', component: FollowingComponent}
+  {path: '', component: getHomeComponent(), canActivate:[AuthGuard]},
+  {path: 'following', component: FollowingComponent, canActivate:[AuthGuard]},
+  {path: 'profile', component: ProfilePageComponent, canActivate:[AuthGuard]},
+  {path: 'pin/:id', component: PinMoreComponent}
 ]
 
 @NgModule({
@@ -28,6 +33,8 @@ const routes = [
     HeaderComponent,
     ProfilePageComponent,
     FollowingComponent,
+    PinComponent,
+    PinMoreComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +45,7 @@ const routes = [
     NgbModule,
     HttpClientModule
   ],
-  providers: [UserService, AuthenticationService],
+  providers: [UserService, AuthenticationService,PinService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,10 +1,11 @@
 import {Injectable, OnInit} from '@angular/core';
 import {UserService} from './user.service';
+import {Route, Router} from '@angular/router';
 @Injectable({
   providedIn: 'root'
 })
 export class AuthenticationService{
-  constructor(private userService : UserService) {
+  constructor(private userService : UserService, private router: Router) {
   }
   User = this.userService.getUsers().subscribe(data => this.User = data)
 
@@ -22,6 +23,7 @@ export class AuthenticationService{
   logout() {
     localStorage.removeItem('currentUser');
     localStorage.removeItem('username');
+    this.router.navigate(['']);
     window.location.reload();
   }
   public get loggedIn(): boolean {
