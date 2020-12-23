@@ -22,4 +22,5 @@ export class PinService {
   getPin(id):Observable<Pin>{
     return this.http.get<Pin>(this.apiUrl + '/pins/' + id)
   }
+
 }

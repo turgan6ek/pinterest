@@ -18,6 +18,7 @@ import { FollowingComponent } from './following/following.component';
 import { PinComponent } from './pin/pin.component';
 import {PinService} from './services/pin.service';
 import { PinMoreComponent } from './pin-more/pin-more.component';
+import { AddpinComponent } from './addpin/addpin.component';
 
 const routes = [
   {path: '', component: getHomeComponent(), canActivate:[AuthGuard]},
@@ -35,6 +36,7 @@ const routes = [
     FollowingComponent,
     PinComponent,
     PinMoreComponent,
+    AddpinComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,35 @@
+<ng-template #content let-modal>
+  <div class="modal-header" style="border: none">
+    <div class="text-center w-100 pt-2" style="margin-left: 15px"> <i class="fab fa-pinterest" style="color: #E60023; font-size: 33px"></i></div>
+
+    <button type="button" style="color: black; border-radius: 15px" class="btn-outline-light btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    </button>
+
+
+  </div>
+  <h2 class="text-center" style="font-weight: normal; font-size: 35px">Create Pin</h2>
+
+  <div class="modal-body w-100 m-auto"  style="border: none" >
+    <form #form = "ngForm">
+      <div class="form-group m-auto" style="width: 60%">
+        <input type="" class="form-control" aria-describedby="emailHelp" placeholder="Title" style="height: 45px; border-radius: 15px"  [(ngModel)]="pinDetails.title" name = "title" #title>
+      </div>
+      <div class="form-group pt-2 m-auto" style="width: 60%" >
+        <input type="" class="form-control"  placeholder="About"  style="height: 45px; border-radius: 15px" minlength="8"  [(ngModel)]="pinDetails.about"  name = "about" #about>
+
+      </div>
+      <div class="form-group pt-2 m-auto" style="width: 60%">
+        <input type="" class="form-control" id="age" aria-describedby="age" placeholder="Image Link" style="height: 45px; border-radius: 15px" [(ngModel)]="pinDetails.img" name = "img" #img>
+      </div>
+      <div class="form-group pt-3 m-auto border-5" style="width: 60%">
+        <button type="button" class="btn btn-danger w-100" style="background-color: #E60023" (click)="addPin('')" style="height: 40px; border-radius: 15px">Create</button>
+
+      </div>
+
+    </form>
+  </div>
+
+</ng-template>
+<button type="button" class="btn btn-secondary" (click)="open(content)" style="background-color: whitesmoke; color: black;font-weight: bold; border-radius: 26px;  border:1px solid whitesmoke; position: fixed; bottom: 5%; right: 5%;box-shadow: black;color: black; " ><i class="fas fa-plus-circle"></i></button>
+
+

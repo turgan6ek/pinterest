@@ -1,0 +1,44 @@
+.mid {
+  width: 70%;
+  height: 100%;
+  margin: auto;
+  border-radius: 50px;
+  box-shadow: 2px 2px 4px #f7f7f7;
+}
+.mid img{
+  float: left;
+  border-radius: 50px 0 0 50px;
+  width: 100%;
+  max-width: 80vh;
+  min-height: 60vh;
+  max-height: 100vh;
+  height: 100%;
+  display:table-cell;
+  vertical-align:middle;
+}
+.card{
+  border-radius: 50px;
+}
+
+.btn {
+  position: absolute;
+  border-radius: 50px;
+  top: 10px;
+  right: 25px;
+  opacity: 1;
+  color: white;
+  background-color: #E60023;
+  z-index: 1;
+}
+.s{
+  display:table-cell;
+  margin:0px;
+  width:70%;
+  background:white;
+  vertical-align:middle;
+}
+.mid .col{
+  vertical-align: middle;
+  float: left;
+}
+

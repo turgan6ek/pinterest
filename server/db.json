@@ -141,7 +141,8 @@
       "title": "Foods",
       "about": "Pasta",
       "link": ""
-    },{
+    },
+    {
       "id": 15,
       "pinner": 2,
       "img": "https://i.pinimg.com/236x/6e/b3/ec/6eb3ecc4327dd7f0aa7e6a9166c5da46.jpg",
@@ -180,7 +181,22 @@
       "title": "Foods",
       "about": "Pasta",
       "link": ""
+    },
+    {
+      "id": 20,
+      "pinner": "",
+      "img": "https://i.pinimg.com/236x/c4/9b/e0/c49be0505608b3e77982fe4daf91105c.jpg",
+      "title": "Lambo",
+      "about": "Car",
+      "link": ""
+    },
+    {
+      "id": 21,
+      "pinner": "",
+      "img": "https://i.pinimg.com/236x/32/32/27/323227131e75a249b596031fd6c77953.jpg",
+      "title": "Car",
+      "about": "Lambo",
+      "link": ""
     }
-
   ]
 }
